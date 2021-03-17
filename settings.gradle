@@ -1,0 +1,14 @@
+pluginManagement {
+    plugins {
+        id "org.jetbrains.kotlin.jvm" version "$kotlinVersion"
+        id "org.jetbrains.kotlin.plugin.serialization" version "$kotlinVersion"
+
+        id "com.diffplug.gradle.spotless" version "$spotlessVersion"
+    }
+}
+
+rootProject.name = 'mmf'
+
+include 'master'
+
+includeBuild 'libs/bellatrix'
