@@ -1,9 +1,10 @@
+/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+
 package com.deflatedpickle.mmf.util
 
 import com.deflatedpickle.bellatrix.Vector3
 import com.deflatedpickle.mmf.util.serializer.AxisSerializer
 import com.deflatedpickle.mmf.util.serializer.VectorDoubleSerializer
-import com.deflatedpickle.mmf.util.serializer.VectorIntSerializer
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

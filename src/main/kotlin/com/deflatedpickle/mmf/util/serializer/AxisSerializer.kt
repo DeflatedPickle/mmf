@@ -1,3 +1,5 @@
+/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+
 package com.deflatedpickle.mmf.util.serializer
 
 import com.deflatedpickle.mmf.util.Axis
@@ -22,6 +24,6 @@ object AxisSerializer : KSerializer<Axis> {
     override fun serialize(encoder: Encoder, value: Axis) =
         encoder.encodeString(value.name.toLowerCase())
 
-    override fun deserialize(decoder: Decoder): Axis
-        = Axis.valueOf(decoder.decodeString().toUpperCase())
+    override fun deserialize(decoder: Decoder): Axis =
+        Axis.valueOf(decoder.decodeString().toUpperCase())
 }

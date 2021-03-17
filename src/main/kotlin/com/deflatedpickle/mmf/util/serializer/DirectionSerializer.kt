@@ -1,3 +1,5 @@
+/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+
 package com.deflatedpickle.mmf.util.serializer
 
 import com.deflatedpickle.mmf.util.Direction
@@ -22,6 +24,6 @@ object DirectionSerializer : KSerializer<Direction> {
     override fun serialize(encoder: Encoder, value: Direction) =
         encoder.encodeString(value.name.toLowerCase())
 
-    override fun deserialize(decoder: Decoder): Direction
-        = Direction.valueOf(decoder.decodeString().toUpperCase())
+    override fun deserialize(decoder: Decoder): Direction =
+        Direction.valueOf(decoder.decodeString().toUpperCase())
 }

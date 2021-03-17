@@ -1,3 +1,5 @@
+/* Copyright (c) 2021 DeflatedPickle under the MIT license */
+
 package com.deflatedpickle.mmf.util
 
 import com.deflatedpickle.mmf.util.serializer.AssetPathSerializer
