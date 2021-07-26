@@ -25,10 +25,11 @@ data class AssetPath(
          * Parse a [String] into an [AssetPath]
          */
         fun from(s: String): AssetPath {
+            val ns = s.replace("\"", "")
             // Sometimes an ID isn't given - it defaults to minecraft
-            val id = s.substringBefore(':', "minecraft")
-            val path = s.substringAfter("$id:").substringBeforeLast('/')
-            val asset = s.substringAfterLast('/')
+            val id = ns.substringBefore(':', "minecraft")
+            val path = ns.substringAfter("$id:").substringBeforeLast('/')
+            val asset = ns.substringAfterLast('/')
 
             return AssetPath(id, path, asset)
         }
